@@ -1,0 +1,160 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import FeatureCards from "./components/FeatureCards";
+import MapSection from "./components/MapSection";
+import Analytics from "./components/Analytics";
+import Footer from "./components/Footer";
+
+export default function App() {
+  return (
+    <div className="bg-slate-950 text-white min-h-screen">
+      <Navbar />
+      <Hero />
+      <FeatureCards />
+      <MapSection />
+      <Analytics />
+      <Footer />
+    </div>
+  );
+}
+
+export default function Navbar() {
+  return (
+    <nav className="flex justify-between items-center px-10 py-5">
+      <h1 className="text-3xl font-bold text-green-400">
+        EcoSutra AI
+      </h1>
+
+      <div className="flex gap-8">
+        <a href="/">Home</a>
+        <a href="/">Dashboard</a>
+        <a href="/">Analytics</a>
+        <a href="/">Solutions</a>
+      </div>
+    </nav>
+  );
+}
+
+export default function Hero() {
+  return (
+    <section className="grid md:grid-cols-2 p-10 items-center">
+
+      <div>
+        <span className="bg-green-900 px-4 py-2 rounded-full">
+          AI Powered Environmental Intelligence
+        </span>
+
+        <h1 className="text-6xl font-bold mt-6">
+          Welcome to
+          <span className="text-green-400"> EcoSutra AI</span>
+        </h1>
+
+        <p className="mt-5 text-gray-300">
+          Transforming environmental data into
+          actionable sustainability insights.
+        </p>
+
+        <div className="mt-8 flex gap-4">
+          <button className="bg-green-500 px-6 py-3 rounded-xl">
+            Explore Dashboard
+          </button>
+
+          <button className="border px-6 py-3 rounded-xl">
+            View Live Map
+          </button>
+        </div>
+      </div>
+
+      <img
+        src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4"
+        alt="Earth"
+        className="rounded-3xl"
+      />
+    </section>
+  );
+}
+
+const features = [
+  "Satellite Monitoring",
+  "Climate Intelligence",
+  "AI Insights",
+  "Real-time Analytics"
+];
+
+export default function FeatureCards() {
+  return (
+    <section className="grid md:grid-cols-4 gap-5 px-10">
+
+      {features.map((item) => (
+        <div
+          key={item}
+          className="bg-slate-900 p-6 rounded-2xl border border-green-500/20"
+        >
+          <h3 className="text-xl font-semibold">
+            {item}
+          </h3>
+
+          <p className="text-gray-400 mt-2">
+            Smart environmental monitoring.
+          </p>
+        </div>
+      ))}
+    </section>
+  );
+}
+
+export default function MapSection() {
+  return (
+    <section className="p-10">
+      <h2 className="text-3xl font-bold mb-5">
+        Live Environmental Map
+      </h2>
+
+      <div className="h-[500px] rounded-3xl overflow-hidden">
+        <iframe
+          title="map"
+          width="100%"
+          height="100%"
+          src="https://www.openstreetmap.org/export/embed.html"
+        />
+      </div>
+    </section>
+  );
+}
+
+export default function Analytics() {
+  return (
+    <section className="grid md:grid-cols-3 gap-5 p-10">
+
+      <div className="bg-slate-900 p-6 rounded-2xl">
+        <h3>Environmental Health Score</h3>
+        <p className="text-6xl text-green-400 mt-3">87</p>
+      </div>
+
+      <div className="bg-slate-900 p-6 rounded-2xl">
+        <h3>Trees Saved</h3>
+        <p className="text-4xl mt-3">12,450</p>
+      </div>
+
+      <div className="bg-slate-900 p-6 rounded-2xl">
+        <h3>Water Saved</h3>
+        <p className="text-4xl mt-3">3.2M L</p>
+      </div>
+
+    </section>
+  );
+}
+
+export default function Footer() {
+  return (
+    <footer className="p-10 text-center">
+      <h2 className="text-3xl text-green-400">
+        Together for a Greener Future
+      </h2>
+
+      <p className="mt-4 text-gray-400">
+        EcoSutra AI © 2026
+      </p>
+    </footer>
+  );
+}
