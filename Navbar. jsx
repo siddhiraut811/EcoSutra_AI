@@ -1,0 +1,16 @@
+export default function Navbar() {
+  return (
+    <nav className="flex justify-between items-center px-10 py-5">
+      <h1 className="text-3xl font-bold text-green-400">
+        EcoSutra AI
+      </h1>
+
+      <div className="flex gap-8">
+        <a href="/">Home</a>
+        <a href="/">Dashboard</a>
+        <a href="/">Analytics</a>
+        <a href="/">Solutions</a>
+      </div>
+    </nav>
+  );
+}
