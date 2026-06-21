@@ -1,0 +1,38 @@
+export default function Hero() {
+  return (
+    <section className="grid md:grid-cols-2 p-10 items-center">
+
+      <div>
+        <span className="bg-green-900 px-4 py-2 rounded-full">
+          AI Powered Environmental Intelligence
+        </span>
+
+        <h1 className="text-6xl font-bold mt-6">
+          Welcome to
+          <span className="text-green-400"> EcoSutra AI</span>
+        </h1>
+
+        <p className="mt-5 text-gray-300">
+          Transforming environmental data into
+          actionable sustainability insights.
+        </p>
+
+        <div className="mt-8 flex gap-4">
+          <button className="bg-green-500 px-6 py-3 rounded-xl">
+            Explore Dashboard
+          </button>
+
+          <button className="border px-6 py-3 rounded-xl">
+            View Live Map
+          </button>
+        </div>
+      </div>
+
+      <img
+        src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4"
+        alt="Earth"
+        className="rounded-3xl"
+      />
+    </section>
+  );
+}
