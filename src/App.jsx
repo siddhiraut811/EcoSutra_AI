@@ -12,9 +12,8 @@ import Analytics from "./components/Analytics";
 import Footer from "./components/Footer";
 
 export default function App() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchCoords, setSearchCoords] = useState(null);
-  // Live footprint in tonnes/yr from the calculator
+  const [searchQuery,     setSearchQuery]     = useState("");
+  const [searchCoords,    setSearchCoords]    = useState(null);
   const [footprintTonnes, setFootprintTonnes] = useState(null);
 
   const handleSearch = (query, coords) => {
@@ -29,7 +28,7 @@ export default function App() {
       <FeatureCards />
       <SearchBar onSearch={handleSearch} searchQuery={searchQuery} />
       <MapSection searchCoords={searchCoords} searchQuery={searchQuery} />
-      <CoolingSolutions />
+      <CoolingSolutions searchQuery={searchQuery} searchCoords={searchCoords} />
       <CityComparison searchQuery={searchQuery} />
       <CarbonCalculator onFootprintChange={setFootprintTonnes} />
       <Leaderboard currentFootprint={footprintTonnes} />
