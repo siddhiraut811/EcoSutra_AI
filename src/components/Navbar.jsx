@@ -6,10 +6,11 @@ export default function Navbar() {
       </span>
 
       <div className="flex gap-8 text-gray-300">
-        <a href="#hero" className="hover:text-orange-400 transition-colors">Home</a>
-        <a href="#map" className="hover:text-orange-400 transition-colors">Heat Map</a>
-        <a href="#analytics" className="hover:text-orange-400 transition-colors">Analytics</a>
-        <a href="#features" className="hover:text-orange-400 transition-colors">Solutions</a>
+        <a href="#hero"       className="hover:text-orange-400 transition-colors">Home</a>
+        <a href="#map"        className="hover:text-orange-400 transition-colors">Heat Map</a>
+        <a href="#solutions"  className="hover:text-orange-400 transition-colors">Solutions</a>
+        <a href="#comparison" className="hover:text-orange-400 transition-colors">City Chart</a>
+        <a href="#analytics"  className="hover:text-orange-400 transition-colors">Analytics</a>
       </div>
     </nav>
   );
