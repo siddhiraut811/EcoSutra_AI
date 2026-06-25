@@ -1,15 +1,15 @@
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-10 py-5">
-      <h1 className="text-3xl font-bold text-green-400">
+    <nav className="flex justify-between items-center px-10 py-5 border-b border-orange-900/30">
+      <span className="text-3xl font-bold text-orange-400">
         EcoSutra AI
-      </h1>
+      </span>
 
-      <div className="flex gap-8">
-        <a href="/">Home</a>
-        <a href="/">Dashboard</a>
-        <a href="/">Analytics</a>
-        <a href="/">Solutions</a>
+      <div className="flex gap-8 text-gray-300">
+        <a href="#hero" className="hover:text-orange-400 transition-colors">Home</a>
+        <a href="#map" className="hover:text-orange-400 transition-colors">Heat Map</a>
+        <a href="#analytics" className="hover:text-orange-400 transition-colors">Analytics</a>
+        <a href="#features" className="hover:text-orange-400 transition-colors">Solutions</a>
       </div>
     </nav>
   );
