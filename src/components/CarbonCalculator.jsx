@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import {
   PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend,
   BarChart, Bar, XAxis, YAxis, CartesianGrid,
@@ -88,7 +88,7 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-export default function CarbonCalculator() {
+export default function CarbonCalculator({ onFootprintChange }) {
   const [values, setValues] = useState(DEFAULTS);
   const [activeTab, setActiveTab] = useState("transport");
 
@@ -108,6 +108,12 @@ export default function CarbonCalculator() {
   const totalAnnual = perCategory.reduce((s, c) => s + c.value, 0);
   const totalMonthly = Math.round(totalAnnual / 12);
   const rating = getRating(totalAnnual);
+
+  // Push live footprint (in tonnes) up to App so Leaderboard can auto-fill it
+  const totalTonnes = Math.round(totalAnnual / 1000 * 10) / 10;
+  useEffect(() => {
+    onFootprintChange?.(totalTonnes);
+  }, [totalTonnes, onFootprintChange]);
 
   // Heat impact: 1 tonne CO₂ ≈ 0.0018°C urban temp rise (simplified proxy)
   const heatContrib = ((totalAnnual / 1000) * 0.0018).toFixed(4);

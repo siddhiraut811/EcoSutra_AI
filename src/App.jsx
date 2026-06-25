@@ -7,12 +7,15 @@ import MapSection from "./components/MapSection";
 import CoolingSolutions from "./components/CoolingSolutions";
 import CityComparison from "./components/CityComparison";
 import CarbonCalculator from "./components/CarbonCalculator";
+import Leaderboard from "./components/Leaderboard";
 import Analytics from "./components/Analytics";
 import Footer from "./components/Footer";
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchCoords, setSearchCoords] = useState(null);
+  // Live footprint in tonnes/yr from the calculator
+  const [footprintTonnes, setFootprintTonnes] = useState(null);
 
   const handleSearch = (query, coords) => {
     setSearchQuery(query);
@@ -28,7 +31,8 @@ export default function App() {
       <MapSection searchCoords={searchCoords} searchQuery={searchQuery} />
       <CoolingSolutions />
       <CityComparison searchQuery={searchQuery} />
-      <CarbonCalculator />
+      <CarbonCalculator onFootprintChange={setFootprintTonnes} />
+      <Leaderboard currentFootprint={footprintTonnes} />
       <Analytics />
       <Footer />
     </div>
