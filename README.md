@@ -270,7 +270,7 @@ The app is currently deployed on Replit and working perfectly!
 - 📱 Works on all devices
 - 💾 Data saved in browser localStorage
 
-### Deploy Your Own Copy to Vercel
+### Deploy Your Own Copy to Vercel 
 
 1. **Fork this repository**
 2. **Go to [vercel.com](https://vercel.com)**
