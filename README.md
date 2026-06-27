@@ -3,9 +3,35 @@
 
 A gamified carbon footprint tracker that makes environmental awareness fun and engaging!
 
-[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://eco-sutra-ai.vercel.app)
+[![Replit](https://img.shields.io/badge/Live%20on-Replit-red?style=flat-square&logo=replit)](https://eco-sutra-ai--siddhiraut811.replit.app)
 [![React](https://img.shields.io/badge/Built%20with-React-61DAFB?style=flat-square&logo=react)](https://react.dev)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![GitHub](https://img.shields.io/badge/GitHub-Code-black?style=flat-square&logo=github)](https://github.com/siddhiraut811/EcoSutra_AI)
+
+---
+
+## 🎯 About This Project
+
+**ECO SUTRA** is built for the **Sama Social "Build for Good" Hackathon 2026** (Dharti Track)
+
+**Problem Statement:**
+India's urban population faces two interconnected crises:
+1. **Rising Carbon Emissions** — Average Indian emits ~1.9 tons/year (still high)
+2. **Urban Heat Islands** — Pune & Mumbai experience temperature spikes of 5-7°C
+
+**Our Solution:**
+A gamified app that:
+- 📊 Tracks personal carbon footprint across 4 categories
+- 🎮 Gamifies sustainability with XP, badges, leaderboards
+- 🌡️ Provides urban heat mitigation strategies
+- 🗺️ Shows heat vs. carbon trade-offs
+- 📱 Works offline as a PWA
+
+**Impact:**
+- Educates users about climate footprint
+- Encourages behavioral change through gamification
+- Provides actionable cooling solutions for cities
+- 100% free and open-source
 
 ---
 
@@ -42,37 +68,62 @@ A gamified carbon footprint tracker that makes environmental awareness fun and e
 
 ## 🚀 Live Demo
 
-**Try it now:** [eco-sutra-ai.vercel.app](https://eco-sutra-ai.vercel.app)
+**Try it now:** [eco-sutra-ai--siddhiraut811.replit.app](https://eco-sutra-ai--siddhiraut811.replit.app)
+
+**Also Available:**
+- 💻 **GitHub:** [github.com/siddhiraut811/EcoSutra_AI](https://github.com/siddhiraut811/EcoSutra_AI)
+- 🎮 **Works on:** Desktop, Tablet, Mobile (PWA-ready)
+
+---
+
+## ⚡ Quick Start (30 seconds)
+
+1. **Open** [eco-sutra-ai--siddhiraut811.replit.app](https://eco-sutra-ai--siddhiraut811.replit.app)
+2. **Click** "CALCULATE" tab
+3. **Enter** your weekly activities (car km, electricity, diet, shopping)
+4. **See** your carbon footprint instantly with visual charts
+5. **Unlock** achievements by reducing emissions!
+
+**No login required. Data saved locally on your device.**
 
 ---
 
 ## 📸 Screenshots
 
 ### Dashboard
-Beautiful gradient UI showing your current carbon footprint and eco level
+Shows your current carbon footprint, eco level, and quick stats
 - Real-time calculations
-- Status indicators (CRITICAL, BEGINNER, DEVELOPING, ADVANCED, ENLIGHTENED)
-- Quick stats: Streak, XP, Achievements, Best Score
+- Status indicators (CRITICAL → ENLIGHTENED)
+- XP, Streak, Achievements, Best Score tracking
 
 ### Calculator
-Input your daily activities and see instant carbon calculations:
-- 🚗 Transportation (car, transit, flights)
+Easy input for daily activities:
+- 🚗 Transportation (car, flights, public transit)
 - ⚡ Energy (electricity, gas, water heating)
 - 🍽️ Diet (omnivore, vegetarian, vegan)
 - 🛍️ Lifestyle (shopping, waste, recycling)
+- 📊 Real-time pie charts showing breakdown
 
-### Achievements
+### Achievements Tab
 Unlock badges by hitting environmental milestones:
 - 👑 Eco Champion (< 2 tons/year)
 - 🚴 Car-Free Warrior (transport < 0.5 tons)
 - 🌱 Plant-Based Sage (diet < 1.5 tons)
+- ⚡ Energy Guardian (energy < 2 tons)
 
-### Wisdom
+### Wisdom Tab
 Learn eco-friendly tips and understand the science:
 - Transportation wisdom
 - Energy conservation facts
 - Diet impact information
 - Lifestyle sustainability tips
+
+### Urban Heat Mitigation
+New Pune & Mumbai features:
+- 🌡️ Heat mitigation strategies for urban areas
+- 🗺️ Interactive project map
+- 📊 Heat vs. Carbon comparison dashboard
+- ✅ Action tracker for cooling initiatives
 
 ---
 
@@ -85,7 +136,7 @@ Learn eco-friendly tips and understand the science:
 - 🎯 **Lucide React** - Icons
 
 **Deployment:**
-- 🚀 **Vercel** - Hosting & CI/CD
+- 🚀 **Replit** - Hosting & Live
 - 📦 **GitHub** - Version control
 
 **Features:**
@@ -95,27 +146,27 @@ Learn eco-friendly tips and understand the science:
 
 ---
 
-## 📦 Installation
+## 📖 Installation
 
 ### Prerequisites
 - Node.js 16+ and npm installed
 - Git
 
-### Clone & Setup
+### Clone & Setup (Local Development)
 
 ```bash
 # Clone the repository
 git clone https://github.com/siddhiraut811/EcoSutra_AI.git
-cd eco-sutra
+cd EcoSutra_AI
 
-# Install dependencies
-npm install recharts lucide-react
+# Install dependencies (use cmd on Windows, not PowerShell)
+npm install
 
 # Start development server
-npm start
+npm run dev
 ```
 
-Your app opens at `http://localhost:3000`
+Your app opens at `http://localhost:5000` 🎉
 
 ---
 
@@ -183,7 +234,7 @@ Emissions calculated based on global standards:
 
 ### Gamification
 - **XP System**: Earn points based on how low your footprint is
-- **Levels**: Progress through 1-n levels based on XP
+- **Levels**: Progress through levels based on XP
 - **Achievements**: Unlock achievements by reaching eco milestones
 - **Streaks**: Track consecutive days of tracking
 
@@ -212,7 +263,14 @@ Global targets:
 
 ## 🚀 Deployment
 
-### Deploy to Vercel (Free!)
+### **Live on Replit (Recommended)**
+The app is currently deployed on Replit and working perfectly!
+- 🌐 **URL:** [eco-sutra-ai--siddhiraut811.replit.app](https://eco-sutra-ai--siddhiraut811.replit.app)
+- ✅ No setup needed — just open and use
+- 📱 Works on all devices
+- 💾 Data saved in browser localStorage
+
+### Deploy Your Own Copy to Vercel
 
 1. **Fork this repository**
 2. **Go to [vercel.com](https://vercel.com)**
@@ -221,6 +279,13 @@ Global targets:
 5. **Click "Deploy"**
 
 Done! Your app is live! 🎉
+
+### Deploy to Netlify
+
+```bash
+npm run build
+# Upload the dist/ folder to Netlify
+```
 
 ### Environment Setup
 No environment variables needed! The app works out of the box.
